@@ -1,0 +1,683 @@
+# 唯一真相：每条源一个 [[source]]。ROUTER.md 由 verify.py 从这里 + 探针结果生成，勿手改 ROUTER.md。
+#
+# 字段
+#   id      唯一短名
+#   cat     路由分类（见 verify.py CATS 顺序）
+#   kind    hf = HuggingFace 数据集 | gh = GitHub 仓库 | web = 其他站点/API
+#   ref     hf/gh: owner/name；web: 探针 URL（必须是机器可判定的端点，不是首页营销页）
+#   expect  web 可选：响应体必须包含的子串（证明端点真的返回数据，而不是 200 的错误页）
+#   frozen  true = 有意冻结的快照（不按"久未更新"降级）
+#   live_days  源头声称持续更新时填：超过这么多天未更新 → ⚠️（抓"号称实时、实际停更"）
+#   use     什么时候来这里（路由句）
+#   why     为什么算优质（信号来源）
+
+# ── 社区推荐信号：人主动推荐过的东西，HackerTube 的原料 ──────────────
+[[source]]
+id = "hn"
+cat = "社区信号"
+kind = "hf"
+ref = "open-index/hacker-news"
+live_days = 3
+use = "要 HN 全量帖子/评论（2006 起，Parquet），做 HackerTube 式的推荐挖掘；要最新数据补跑官方 API"
+why = "HackerTube 的直接原料；技术人群近 20 年的主动推荐"
+
+[[source]]
+id = "hn-api"
+cat = "社区信号"
+kind = "web"
+ref = "https://hacker-news.firebaseio.com/v0/maxitem.json"
+use = "要 HN 实时单条数据（官方 API）"
+why = "官方源，上面 HF 镜像的上游"
+
+[[source]]
+id = "clickhouse-play"
+cat = "社区信号"
+kind = "web"
+ref = "https://play.clickhouse.com/?user=play&query=SELECT+count()+FROM+hackernews"
+use = "不下载、直接用 SQL 试查 HN / GitHub 事件等表"
+why = "预装 hackernews、github_events 等表，原型验证零成本"
+
+[[source]]
+id = "reddit-arctic"
+cat = "社区信号"
+kind = "hf"
+ref = "open-index/arctic"
+live_days = 120
+use = "要 Reddit 全量（2005 起，157 亿条），按 subreddit 切高质量社区"
+why = "Pushshift 停服后的社区接替，覆盖所有公开 subreddit"
+
+[[source]]
+id = "arctic-shift"
+cat = "社区信号"
+kind = "gh"
+ref = "ArthurHeitmann/arctic_shift"
+use = "要 Reddit 存档的上游工具 / 在线查询 API"
+why = "上面 HF 镜像的源头"
+
+[[source]]
+id = "stackexchange"
+cat = "社区信号"
+kind = "hf"
+ref = "HuggingFaceH4/stack-exchange-preferences"
+frozen = true
+use = "要 StackExchange 问答 + 投票（偏好对）"
+why = "投票即质量信号"
+
+[[source]]
+id = "lobsters"
+cat = "社区信号"
+kind = "web"
+ref = "https://lobste.rs/hottest.json"
+expect = "short_id"
+use = "要比 HN 更窄更硬核的技术链接流"
+why = "邀请制社区，噪声低"
+
+[[source]]
+id = "v2ex"
+cat = "社区信号"
+kind = "web"
+ref = "https://www.v2ex.com/api/topics/hot.json"
+expect = "title"
+use = "要中文技术社区热帖"
+why = "中文程序员社区的长期主阵地"
+
+[[source]]
+id = "zhihu-kol"
+cat = "社区信号"
+kind = "hf"
+ref = "wangrui6/Zhihu-KOL"
+frozen = true
+use = "要中文知乎高质量问答快照"
+why = "KOL 回答，带点赞"
+
+[[source]]
+id = "bluesky"
+cat = "社区信号"
+kind = "hf"
+ref = "alpindale/two-million-bluesky-posts"
+frozen = true
+use = "要 Bluesky 帖子样本"
+why = "开放协议社交网络的公开数据"
+
+[[source]]
+id = "kagi-smallweb"
+cat = "社区信号"
+kind = "gh"
+ref = "kagisearch/smallweb"
+use = "要人工挑过的独立博客 / 小站列表（带 RSS）"
+why = "Kagi 人工维护，排除 SEO 农场"
+
+# ── 人工清单：一群人的策展，可直接二次加工 ────────────────────────
+[[source]]
+id = "awesome-public-datasets"
+cat = "人工清单"
+kind = "gh"
+ref = "awesomedata/awesome-public-datasets"
+use = "找某主题的公开数据集（本路由没覆盖到的长尾先去这里）"
+why = "8 万星，按主题分类，元数据在 apd-core 可机读"
+
+[[source]]
+id = "public-apis"
+cat = "人工清单"
+kind = "gh"
+ref = "public-apis/public-apis"
+use = "找免费 API"
+why = "最大的公开 API 清单"
+
+[[source]]
+id = "cs-video-courses"
+cat = "人工清单"
+kind = "gh"
+ref = "Developer-Y/cs-video-courses"
+use = "要有视频的大学 CS 课程"
+why = "按学科整理的公开课视频"
+
+[[source]]
+id = "engineering-blogs"
+cat = "人工清单"
+kind = "gh"
+ref = "kilimchoi/engineering-blogs"
+use = "要公司技术博客列表"
+why = "3.9 万星；注意 2024 后更新放缓"
+
+[[source]]
+id = "chinese-independent-blogs"
+cat = "人工清单"
+kind = "gh"
+ref = "timqian/chinese-independent-blogs"
+use = "要中文独立博客（多数带 RSS）"
+why = "社区维护，带 RSS 地址"
+
+[[source]]
+id = "ruanyf-weekly"
+cat = "人工清单"
+kind = "gh"
+ref = "ruanyf/weekly"
+use = "要中文人工筛过的科技链接（历年每期 Markdown）"
+why = "每周人工筛选，全文在 GitHub 易抽取"
+
+[[source]]
+id = "awesome-rss-feeds"
+cat = "人工清单"
+kind = "gh"
+ref = "plenaryapp/awesome-rss-feeds"
+use = "要按主题/国家分类的 RSS（带 OPML）"
+why = "OPML 可直接导入阅读器或采集器"
+
+[[source]]
+id = "awesome-newsletters"
+cat = "人工清单"
+kind = "gh"
+ref = "zudochkin/awesome-newsletters"
+use = "要英文 Newsletter 列表"
+why = "按领域整理"
+
+# ── 学术 ──────────────────────────────────────────────────────
+[[source]]
+id = "openalex"
+cat = "学术"
+kind = "web"
+ref = "https://api.openalex.org/works?per-page=1"
+expect = "\"meta\""
+use = "要全学科论文 + 引用 + 作者 + 机构图谱（CC0）"
+why = "MAG 的开放继任者，引用数是天然质量信号；API 现按额度计费（免费每日约 $0.1 额度）"
+
+[[source]]
+id = "open-arxiv"
+cat = "学术"
+kind = "hf"
+ref = "open-index/open-arxiv"
+use = "要 arXiv 全量元数据（约 300 万篇，CC0，Parquet）"
+why = "Cornell 官方 Kaggle 元数据的 Parquet 版"
+
+[[source]]
+id = "arxiv-latex"
+cat = "学术"
+kind = "hf"
+ref = "scholarweave/arxiv-latex"
+use = "要 arXiv 论文 LaTeX 正文"
+why = "正文级，近期仍更新"
+
+[[source]]
+id = "semantic-scholar"
+cat = "学术"
+kind = "web"
+ref = "https://api.semanticscholar.org/graph/v1/paper/search?query=transformer&limit=1"
+expect = "\"data\""
+use = "要论文检索 / 影响力引用 / 推荐 API（无 key 共享额度常 429，申请免费 key）"
+why = "AI2 维护，有 influentialCitationCount"
+
+[[source]]
+id = "pubmed-eutils"
+cat = "学术"
+kind = "web"
+ref = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=crispr&retmax=1&retmode=json"
+expect = "esearchresult"
+use = "要生物医学文献检索（官方 API）"
+why = "NCBI 官方"
+
+[[source]]
+id = "pubmed-hf"
+cat = "学术"
+kind = "hf"
+ref = "ncbi/pubmed"
+frozen = true
+use = "要 PubMed 摘要批量"
+why = "NCBI 官方上传"
+
+# ── 百科 / 知识 ───────────────────────────────────────────────
+[[source]]
+id = "wikipedia"
+cat = "百科知识"
+kind = "hf"
+ref = "wikimedia/wikipedia"
+frozen = true
+use = "要多语言维基正文（批量）"
+why = "Wikimedia 官方"
+
+[[source]]
+id = "structured-wikipedia"
+cat = "百科知识"
+kind = "hf"
+ref = "wikimedia/structured-wikipedia"
+use = "要结构化维基（infobox、章节）"
+why = "Wikimedia Enterprise 官方"
+
+[[source]]
+id = "wikimedia-dumps"
+cat = "百科知识"
+kind = "web"
+ref = "https://dumps.wikimedia.org/index.json"
+expect = "wikis"
+use = "要最新维基 / Wikidata 全量 dump"
+why = "上游官方 dump"
+
+[[source]]
+id = "open-library"
+cat = "百科知识"
+kind = "hf"
+ref = "open-index/open-library"
+use = "要图书元数据（书目、作者、ISBN）"
+why = "Internet Archive Open Library 的 Parquet 版"
+
+# ── 书籍 / 文化遗产 ──────────────────────────────────────────
+[[source]]
+id = "common-corpus"
+cat = "书籍文化"
+kind = "hf"
+ref = "PleIAs/common_corpus"
+use = "要全开放许可的大语料（书、报纸、政府、科学，2.27T token）"
+why = "逐文档可追溯许可"
+
+[[source]]
+id = "institutional-books"
+cat = "书籍文化"
+kind = "hf"
+ref = "institutional/institutional-books-hl"
+use = "要哈佛图书馆公版书（需申请）"
+why = "图书馆馆藏级"
+
+[[source]]
+id = "us-pd-books"
+cat = "书籍文化"
+kind = "hf"
+ref = "storytracer/US-PD-Books"
+frozen = true
+use = "要美国公版书全文"
+why = "公版，可商用"
+
+[[source]]
+id = "gutenberg"
+cat = "书籍文化"
+kind = "web"
+ref = "https://gutendex.com/books/?ids=1342"
+expect = "Pride"
+use = "要古登堡计划书目/全文（JSON API）"
+why = "公版经典"
+
+[[source]]
+id = "internet-archive"
+cat = "书籍文化"
+kind = "web"
+ref = "https://archive.org/advancedsearch.php?q=collection%3Aopensource&fl%5B%5D=identifier&rows=1&output=json"
+expect = "numFound"
+use = "要网页快照 / 老书 / 音视频档案"
+why = "最大的公共数字档案馆"
+
+# ── 视频 / 音频 ──────────────────────────────────────────────
+[[source]]
+id = "youtube-commons"
+cat = "视频音频"
+kind = "hf"
+ref = "PleIAs/YouTube-Commons"
+frozen = true
+use = "要 CC-BY YouTube 视频转写（按内容找视频）"
+why = "只收 CC-BY 授权视频"
+
+[[source]]
+id = "finevideo"
+cat = "视频音频"
+kind = "hf"
+ref = "HuggingFaceFV/finevideo"
+use = "要带细粒度标注的视频"
+why = "HF 官方，含场景/情绪标注"
+
+[[source]]
+id = "podcast-index"
+cat = "视频音频"
+kind = "web"
+ref = "https://podcastindex.org/"
+expect = "Podcast"
+use = "要开放播客目录（有公开 DB dump 与 API）"
+why = "开放的播客索引，替代 Apple 封闭目录"
+
+[[source]]
+id = "emilia"
+cat = "视频音频"
+kind = "hf"
+ref = "amphion/Emilia-Dataset"
+frozen = true
+use = "要大规模多语种真实语音"
+why = "真实场景语音，中英为主"
+
+# ── 代码 / 开发 ──────────────────────────────────────────────
+[[source]]
+id = "gharchive"
+cat = "代码开发"
+kind = "web"
+ref = "https://data.gharchive.org/2024-01-01-0.json.gz"
+use = "要 GitHub 全部公开事件（2011 起，每小时一个文件）"
+why = "star/fork/PR 是开发者的行为信号"
+
+[[source]]
+id = "open-github"
+cat = "代码开发"
+kind = "hf"
+ref = "open-index/open-github"
+live_days = 3
+use = "要 GH Archive 的 Parquet 实时镜像（注意卡片称历史仍在回填）"
+why = "免解析，直接 DuckDB"
+
+[[source]]
+id = "the-stack-v2"
+cat = "代码开发"
+kind = "hf"
+ref = "bigcode/the-stack-v2"
+use = "要许可清洗过的源码大集"
+why = "BigCode 官方，带许可证过滤"
+
+[[source]]
+id = "swe-chat"
+cat = "代码开发"
+kind = "hf"
+ref = "SALT-NLP/SWE-chat"
+use = "要真实开发者与编码 agent 的对话"
+why = "真实使用而非合成"
+
+# ── 法律 / 政府 / 统计 ───────────────────────────────────────
+[[source]]
+id = "caselaw"
+cat = "法律政府"
+kind = "hf"
+ref = "common-pile/caselaw_access_project"
+frozen = true
+use = "要美国判例全文"
+why = "哈佛法学院 CAP"
+
+[[source]]
+id = "courtlistener"
+cat = "法律政府"
+kind = "web"
+ref = "https://www.courtlistener.com/api/rest/v4/"
+expect = "search"
+use = "要美国判例 / 庭审文件实时 API"
+why = "Free Law Project，持续更新"
+
+[[source]]
+id = "au-legal"
+cat = "法律政府"
+kind = "hf"
+ref = "isaacus/open-australian-legal-corpus"
+use = "要澳洲法律全文"
+why = "官方来源汇编，开放许可"
+
+[[source]]
+id = "owid"
+cat = "法律政府"
+kind = "web"
+ref = "https://ourworldindata.org/grapher/life-expectancy.csv?v=1&csvType=filtered&useColumnShortNames=true"
+expect = "entity,code,year"
+use = "要国家级长期统计（每张图都能下 CSV）"
+why = "带出处与方法说明"
+
+[[source]]
+id = "worldbank"
+cat = "法律政府"
+kind = "web"
+ref = "https://api.worldbank.org/v2/country/CHN/indicator/NY.GDP.MKTP.CD?format=json&per_page=1"
+expect = "indicator"
+use = "要世界银行宏观指标 API"
+why = "官方"
+
+[[source]]
+id = "data-gov"
+cat = "法律政府"
+kind = "web"
+ref = "https://catalog.data.gov/"
+expect = "dataset"
+use = "要美国政府开放数据目录（2026 起 CKAN API 迁到 api.gsa.gov，需免费 api_key）"
+why = "官方目录"
+
+# ── 金融 ──────────────────────────────────────────────────────
+[[source]]
+id = "sec-edgar"
+cat = "金融"
+kind = "hf"
+ref = "TeraflopAI/SEC-EDGAR"
+use = "要美股公司公告批量"
+why = "一手披露文件"
+
+[[source]]
+id = "yahoo-finance"
+cat = "金融"
+kind = "hf"
+ref = "defeatbeta/yahoo-finance-data"
+live_days = 7
+use = "要美股行情 / 财报（每日更新）"
+why = "持续更新，下载量高"
+
+[[source]]
+id = "earnings-calls"
+cat = "金融"
+kind = "hf"
+ref = "kurry/sp500_earnings_transcripts"
+use = "要标普 500 财报电话会转写"
+why = "管理层原话"
+
+[[source]]
+id = "economic-index"
+cat = "金融"
+kind = "hf"
+ref = "Anthropic/EconomicIndex"
+use = "要 AI 在各职业任务中的实际使用分布"
+why = "Anthropic 一手使用数据"
+
+# ── 新闻 / 事件 ──────────────────────────────────────────────
+[[source]]
+id = "gdelt"
+cat = "新闻事件"
+kind = "web"
+ref = "http://data.gdeltproject.org/gdeltv2/lastupdate.txt"
+expect = "export"
+use = "要全球新闻事件流（15 分钟更新）"
+why = "覆盖面最广的开放事件库"
+
+[[source]]
+id = "newswire"
+cat = "新闻事件"
+kind = "hf"
+ref = "dell-research-harvard/newswire"
+frozen = true
+use = "要美国历史通讯社稿（1878-1977）"
+why = "哈佛整理，历史一手稿"
+
+[[source]]
+id = "common-crawl"
+cat = "新闻事件"
+kind = "web"
+ref = "https://index.commoncrawl.org/collinfo.json"
+expect = "CC-MAIN"
+use = "要原始网页抓取（含 CC-NEWS）"
+why = "所有开放网页语料的上游"
+
+# ── 网页语料（已清洗） ───────────────────────────────────────
+[[source]]
+id = "fineweb"
+cat = "网页语料"
+kind = "hf"
+ref = "HuggingFaceFW/fineweb-edu"
+use = "要按教育价值打分过的英文网页"
+why = "分类器打分，可按分数阈值取"
+
+[[source]]
+id = "fineweb-2"
+cat = "网页语料"
+kind = "hf"
+ref = "HuggingFaceFW/fineweb-2"
+use = "要多语种（含中文）清洗网页"
+why = "HF 官方，1000+ 语种"
+
+[[source]]
+id = "finepdfs"
+cat = "网页语料"
+kind = "hf"
+ref = "HuggingFaceFW/finepdfs"
+use = "要网上 PDF 抽取文本（报告、论文、手册）"
+why = "PDF 信息密度高于普通网页"
+
+[[source]]
+id = "chinese-webtext"
+cat = "网页语料"
+kind = "hf"
+ref = "CASIA-LM/ChineseWebText2.0"
+frozen = true
+use = "要带质量分的中文网页"
+why = "中科院自动化所，多维质量标签"
+
+# ── 消费 / 评论 / 兴趣 ───────────────────────────────────────
+[[source]]
+id = "amazon-reviews"
+cat = "消费兴趣"
+kind = "hf"
+ref = "McAuley-Lab/Amazon-Reviews-2023"
+frozen = true
+use = "要商品评论 + 元数据（推荐系统经典）"
+why = "UCSD 官方，规模最大"
+
+[[source]]
+id = "steam-games"
+cat = "消费兴趣"
+kind = "hf"
+ref = "FronkonGames/steam-games-dataset"
+use = "要 Steam 游戏元数据与评价"
+why = "持续更新"
+
+[[source]]
+id = "lichess"
+cat = "消费兴趣"
+kind = "hf"
+ref = "Lichess/standard-chess-games"
+use = "要全量棋局 / 残局题"
+why = "Lichess 官方，CC0"
+
+[[source]]
+id = "musicbrainz"
+cat = "消费兴趣"
+kind = "web"
+ref = "https://musicbrainz.org/ws/2/artist/?query=radiohead&limit=1&fmt=json"
+expect = "artists"
+use = "要音乐元数据（艺人、专辑、录音）"
+why = "开放音乐百科，CC0 核心数据"
+
+[[source]]
+id = "osm"
+cat = "消费兴趣"
+kind = "web"
+ref = "https://planet.openstreetmap.org/"
+expect = "planet"
+use = "要全球地图 / POI"
+why = "开放地图的上游"
+
+# ── 生物 / 医学 ──────────────────────────────────────────────
+[[source]]
+id = "finedna"
+cat = "生物医学"
+kind = "hf"
+ref = "HuggingFaceBio/FineDNA"
+use = "要清洗过的 DNA 序列语料"
+why = "HF 官方新发"
+
+[[source]]
+id = "ct-rate"
+cat = "生物医学"
+kind = "hf"
+ref = "ibrahimhamamci/CT-RATE"
+use = "要 CT 影像 + 放射报告"
+why = "影像-报告配对，持续维护"
+
+# ── 3D / 机器人 / 物理 AI ────────────────────────────────────
+[[source]]
+id = "nvidia-av"
+cat = "物理AI"
+kind = "hf"
+ref = "nvidia/PhysicalAI-Autonomous-Vehicles"
+use = "要自动驾驶多传感器数据"
+why = "NVIDIA 官方，规模大"
+
+[[source]]
+id = "objaverse"
+cat = "物理AI"
+kind = "hf"
+ref = "allenai/objaverse"
+use = "要大规模 3D 物体"
+why = "AI2 官方"
+
+[[source]]
+id = "egocentric-10k"
+cat = "物理AI"
+kind = "hf"
+ref = "builddotai/Egocentric-10K"
+use = "要第一人称工厂作业视频"
+why = "真实工作场景"
+
+# ── AI 交互 / 评测 ───────────────────────────────────────────
+[[source]]
+id = "wildchat"
+cat = "AI交互评测"
+kind = "hf"
+ref = "allenai/WildChat-1M"
+frozen = true
+use = "要真实用户与 ChatGPT 的对话"
+why = "真实流量，非合成"
+
+[[source]]
+id = "lmsys-chat"
+cat = "AI交互评测"
+kind = "hf"
+ref = "lmsys/lmsys-chat-1m"
+frozen = true
+use = "要多模型真实对话"
+why = "Chatbot Arena 真实流量"
+
+[[source]]
+id = "hle"
+cat = "AI交互评测"
+kind = "hf"
+ref = "cais/hle"
+use = "要前沿难度评测题"
+why = "专家出题"
+
+[[source]]
+id = "gdpval"
+cat = "AI交互评测"
+kind = "hf"
+ref = "openai/gdpval"
+use = "要真实职业任务评测"
+why = "按职业 GDP 权重选题"
+
+# ── 数据平台（长尾入口：本路由没有就去这里搜） ───────────────
+[[source]]
+id = "zenodo"
+cat = "数据平台"
+kind = "web"
+ref = "https://zenodo.org/api/records?size=1"
+expect = "hits"
+use = "要论文配套数据（带 DOI）"
+why = "CERN 运营，学术数据存档"
+
+[[source]]
+id = "aws-open-data"
+cat = "数据平台"
+kind = "web"
+ref = "https://registry.opendata.aws/"
+expect = "Registry of Open Data"
+use = "要 TB 级云上公开数据（卫星、基因组、气象）"
+why = "原地计算不用下载"
+
+[[source]]
+id = "source-coop"
+cat = "数据平台"
+kind = "web"
+ref = "https://source.coop/"
+expect = "Source"
+use = "要地理空间 / 云原生格式数据"
+why = "Radiant Earth 运营"
+
+[[source]]
+id = "academic-torrents"
+cat = "数据平台"
+kind = "web"
+ref = "https://academictorrents.com/"
+expect = "Academic Torrents"
+use = "要超大学术数据（BT 分发，含旧 Reddit dump）"
+why = "大体量分发通道"
