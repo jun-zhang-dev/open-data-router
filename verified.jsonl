@@ -1,77 +1,77 @@
-{"id": "hn", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2026-08-23T16:25:00.000Z", "license": "odc-by", "popularity": 421, "gated": false, "detail": "声称持续更新，但已 71 天未更新", "status": "warn"}
-{"id": "hn-api", "checked_at": "2026-11-03T05:49:49+00:00", "detail": "HTTP 200", "status": "ok"}
-{"id": "clickhouse-play", "checked_at": "2026-11-03T05:49:49+00:00", "detail": "HTTP 200", "status": "ok"}
-{"id": "reddit-arctic", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2026-08-06T17:53:23.000Z", "license": "other", "popularity": 39, "gated": false, "detail": "likes=39 dl30d=56523", "status": "ok"}
-{"id": "arctic-shift", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2026-10-11T10:07:27Z", "license": null, "popularity": 1773, "detail": "stars=1773", "status": "ok"}
-{"id": "stackexchange", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2023-03-08T03:37:53.000Z", "license": "cc-by-sa-4.0", "popularity": 138, "gated": false, "detail": "likes=138 dl30d=11304", "status": "ok"}
-{"id": "lobsters", "checked_at": "2026-11-03T05:49:49+00:00", "detail": "HTTP 200 含 'short_id'", "status": "ok"}
-{"id": "v2ex", "checked_at": "2026-11-03T05:49:49+00:00", "detail": "HTTP 200 含 'title'", "status": "ok"}
-{"id": "zhihu-kol", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2023-04-23T13:26:03.000Z", "license": null, "popularity": 272, "gated": false, "detail": "likes=272 dl30d=1887", "status": "ok"}
-{"id": "bluesky", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2024-11-28T06:38:41.000Z", "license": "apache-2.0", "popularity": 212, "gated": false, "detail": "likes=212 dl30d=1063", "status": "ok"}
-{"id": "kagi-smallweb", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2026-11-01T14:01:46Z", "license": "MIT", "popularity": 1728, "detail": "stars=1728", "status": "ok"}
-{"id": "awesome-public-datasets", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2026-11-02T19:34:27Z", "license": "MIT", "popularity": 79920, "detail": "stars=79920", "status": "ok"}
-{"id": "public-apis", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2026-11-01T18:22:08Z", "license": "MIT", "popularity": 495614, "detail": "stars=495614", "status": "ok"}
-{"id": "cs-video-courses", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2026-10-31T22:05:30Z", "license": null, "popularity": 84519, "detail": "stars=84519", "status": "ok"}
-{"id": "engineering-blogs", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2024-08-21T13:01:11Z", "license": null, "popularity": 38850, "detail": "803 天未更新", "status": "warn"}
-{"id": "chinese-independent-blogs", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2026-11-03T01:33:42Z", "license": "MIT", "popularity": 24376, "detail": "stars=24376", "status": "ok"}
-{"id": "ruanyf-weekly", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2026-10-31T23:37:58Z", "license": null, "popularity": 107456, "detail": "stars=107456", "status": "ok"}
-{"id": "awesome-rss-feeds", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2026-10-05T18:10:28Z", "license": "CC0-1.0", "popularity": 2867, "detail": "stars=2867", "status": "ok"}
-{"id": "awesome-newsletters", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2026-10-01T13:40:00Z", "license": null, "popularity": 4511, "detail": "stars=4511", "status": "ok"}
-{"id": "openalex", "checked_at": "2026-11-03T05:49:49+00:00", "detail": "HTTP 200 含 '\"meta\"'", "status": "ok"}
-{"id": "open-arxiv", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2026-03-24T04:18:12.000Z", "license": "cc0-1.0", "popularity": 18, "gated": false, "detail": "likes=18 dl30d=882", "status": "ok"}
-{"id": "arxiv-latex", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2026-10-27T07:06:24.000Z", "license": "other", "popularity": 149, "gated": false, "detail": "likes=149 dl30d=16328", "status": "ok"}
-{"id": "semantic-scholar", "checked_at": "2026-11-03T05:49:49+00:00", "status": "warn", "detail": "HTTP 429 限流（端点存在，数据未取到）"}
-{"id": "pubmed-eutils", "checked_at": "2026-11-03T05:49:49+00:00", "detail": "HTTP 200 含 'esearchresult'", "status": "ok"}
-{"id": "pubmed-hf", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2024-01-26T17:52:23.000Z", "license": "other", "popularity": 174, "gated": false, "detail": "likes=174 dl30d=772", "status": "ok"}
-{"id": "wikipedia", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2024-01-09T09:40:51.000Z", "license": "cc-by-sa-3.0,gfdl", "popularity": 1703, "gated": false, "detail": "likes=1703 dl30d=301231", "status": "ok"}
-{"id": "structured-wikipedia", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2026-05-19T12:54:16.000Z", "license": "cc-by-sa-4.0", "popularity": 408, "gated": false, "detail": "likes=408 dl30d=9923", "status": "ok"}
-{"id": "wikimedia-dumps", "checked_at": "2026-11-03T05:49:49+00:00", "detail": "HTTP 200 含 'wikis'", "status": "ok"}
-{"id": "open-library", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2026-03-24T09:55:33.000Z", "license": "cc0-1.0", "popularity": 9, "gated": false, "detail": "likes=9 dl30d=1372", "status": "ok"}
-{"id": "common-corpus", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2026-05-06T00:28:17.000Z", "license": null, "popularity": 446, "gated": false, "detail": "likes=446 dl30d=195842", "status": "ok"}
-{"id": "institutional-books", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2026-08-19T20:10:57.000Z", "license": null, "popularity": 305, "gated": true, "detail": "likes=305 dl30d=8100", "status": "ok"}
-{"id": "us-pd-books", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2024-03-13T19:26:24.000Z", "license": "cc0-1.0", "popularity": 201, "gated": false, "detail": "likes=201 dl30d=357", "status": "ok"}
-{"id": "gutenberg", "checked_at": "2026-11-03T05:49:49+00:00", "detail": "HTTP 200 含 'Pride'", "status": "ok"}
-{"id": "internet-archive", "checked_at": "2026-11-03T05:49:49+00:00", "detail": "HTTP 200 含 'numFound'", "status": "ok"}
-{"id": "youtube-commons", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2024-06-26T08:08:14.000Z", "license": "cc-by-4.0", "popularity": 406, "gated": false, "detail": "likes=406 dl30d=8901", "status": "ok"}
-{"id": "finevideo", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2026-04-30T18:21:00.000Z", "license": "cc", "popularity": 387, "gated": true, "detail": "likes=387 dl30d=31418", "status": "ok"}
-{"id": "podcast-index", "checked_at": "2026-11-03T05:49:49+00:00", "detail": "HTTP 200 含 'Podcast'", "status": "ok"}
-{"id": "emilia", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2025-02-28T05:41:37.000Z", "license": "cc-by-4.0", "popularity": 505, "gated": true, "detail": "likes=505 dl30d=57463", "status": "ok"}
-{"id": "gharchive", "checked_at": "2026-11-03T05:49:49+00:00", "detail": "HTTP 206", "status": "ok"}
-{"id": "open-github", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2026-04-09T05:04:03.000Z", "license": "odc-by", "popularity": 10, "gated": false, "detail": "声称持续更新，但已 208 天未更新", "status": "warn"}
-{"id": "the-stack-v2", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2026-08-03T13:24:25.000Z", "license": "other", "popularity": 671, "gated": true, "detail": "likes=671 dl30d=11493", "status": "ok"}
-{"id": "swe-chat", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2026-10-03T22:38:39.000Z", "license": "odc-by", "popularity": 150, "gated": true, "detail": "likes=150 dl30d=15307", "status": "ok"}
-{"id": "caselaw", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2025-06-06T03:51:23.000Z", "license": null, "popularity": 229, "gated": false, "detail": "likes=229 dl30d=6243", "status": "ok"}
-{"id": "courtlistener", "checked_at": "2026-11-03T05:49:49+00:00", "detail": "HTTP 200 含 'search'", "status": "ok"}
-{"id": "au-legal", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2026-03-07T03:23:13.000Z", "license": "other", "popularity": 107, "gated": false, "detail": "likes=107 dl30d=10705", "status": "ok"}
-{"id": "owid", "checked_at": "2026-11-03T05:49:49+00:00", "detail": "HTTP 200 含 'entity,code,year'", "status": "ok"}
-{"id": "worldbank", "checked_at": "2026-11-03T05:49:49+00:00", "detail": "HTTP 200 含 'indicator'", "status": "ok"}
-{"id": "data-gov", "checked_at": "2026-11-03T05:49:49+00:00", "detail": "HTTP 200 含 'dataset'", "status": "ok"}
-{"id": "sec-edgar", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2026-04-17T21:13:20.000Z", "license": "apache-2.0", "popularity": 51, "gated": false, "detail": "likes=51 dl30d=16057", "status": "ok"}
-{"id": "yahoo-finance", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2026-11-03T04:48:34.000Z", "license": "odc-by", "popularity": 148, "gated": false, "detail": "likes=148 dl30d=162790", "status": "ok"}
-{"id": "earnings-calls", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2025-05-21T20:30:30.000Z", "license": "mit", "popularity": 22, "gated": false, "detail": "likes=22 dl30d=1396", "status": "ok"}
-{"id": "economic-index", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2026-09-30T17:14:54.000Z", "license": "mit", "popularity": 599, "gated": false, "detail": "likes=599 dl30d=21608", "status": "ok"}
-{"id": "gdelt", "checked_at": "2026-11-03T05:49:49+00:00", "detail": "HTTP 200 含 'export'", "status": "ok"}
-{"id": "newswire", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2025-08-30T12:43:14.000Z", "license": "cc-by-4.0", "popularity": 94, "gated": false, "detail": "likes=94 dl30d=10995", "status": "ok"}
-{"id": "common-crawl", "checked_at": "2026-11-03T05:49:49+00:00", "detail": "HTTP 200 含 'CC-MAIN'", "status": "ok"}
-{"id": "fineweb", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2025-07-11T20:16:53.000Z", "license": "odc-by", "popularity": 1389, "gated": false, "detail": "likes=1389 dl30d=436828", "status": "ok"}
-{"id": "fineweb-2", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2025-10-27T18:32:07.000Z", "license": "odc-by", "popularity": 923, "gated": false, "detail": "likes=923 dl30d=139664", "status": "ok"}
-{"id": "finepdfs", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2026-04-03T19:19:23.000Z", "license": "odc-by", "popularity": 954, "gated": false, "detail": "likes=954 dl30d=81557", "status": "ok"}
-{"id": "chinese-webtext", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2024-12-02T08:43:03.000Z", "license": "apache-2.0", "popularity": 34, "gated": false, "detail": "likes=34 dl30d=3255", "status": "ok"}
-{"id": "amazon-reviews", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2024-12-08T22:21:49.000Z", "license": null, "popularity": 397, "gated": false, "detail": "likes=397 dl30d=147699", "status": "ok"}
-{"id": "steam-games", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2026-11-02T07:38:22.000Z", "license": "mit", "popularity": 94, "gated": false, "detail": "likes=94 dl30d=2911", "status": "ok"}
-{"id": "lichess", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2025-10-16T09:07:45.000Z", "license": "cc0-1.0", "popularity": 120, "gated": false, "detail": "likes=120 dl30d=868165", "status": "ok"}
-{"id": "musicbrainz", "checked_at": "2026-11-03T05:49:49+00:00", "detail": "HTTP 200 含 'artists'", "status": "ok"}
-{"id": "osm", "checked_at": "2026-11-03T05:49:49+00:00", "detail": "HTTP 200 含 'planet'", "status": "ok"}
-{"id": "finedna", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2026-10-30T17:15:34.000Z", "license": "apache-2.0", "popularity": 43, "gated": false, "detail": "likes=43 dl30d=4441", "status": "ok"}
-{"id": "ct-rate", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2026-10-12T14:23:57.000Z", "license": "cc-by-nc-sa-4.0", "popularity": 383, "gated": true, "detail": "likes=383 dl30d=129975", "status": "ok"}
-{"id": "nvidia-av", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2026-10-23T06:52:01.000Z", "license": "other", "popularity": 1171, "gated": true, "detail": "likes=1171 dl30d=230907", "status": "ok"}
-{"id": "objaverse", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2026-10-08T13:51:55.000Z", "license": "odc-by", "popularity": 482, "gated": false, "detail": "likes=482 dl30d=1296013", "status": "ok"}
-{"id": "egocentric-10k", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2026-02-16T05:58:56.000Z", "license": "apache-2.0", "popularity": 371, "gated": true, "detail": "likes=371 dl30d=56702", "status": "ok"}
-{"id": "wildchat", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2024-10-17T18:04:41.000Z", "license": "odc-by", "popularity": 480, "gated": false, "detail": "likes=480 dl30d=37704", "status": "ok"}
-{"id": "lmsys-chat", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2024-07-27T09:28:42.000Z", "license": null, "popularity": 1064, "gated": true, "detail": "likes=1064 dl30d=4314", "status": "ok"}
-{"id": "hle", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2026-01-20T22:42:17.000Z", "license": "mit", "popularity": 1072, "gated": true, "detail": "likes=1072 dl30d=28763", "status": "ok"}
-{"id": "gdpval", "checked_at": "2026-11-03T05:49:49+00:00", "updated": "2026-02-10T19:31:04.000Z", "license": null, "popularity": 572, "gated": false, "detail": "likes=572 dl30d=279620", "status": "ok"}
-{"id": "zenodo", "checked_at": "2026-11-03T05:49:49+00:00", "detail": "HTTP 200 含 'hits'", "status": "ok"}
-{"id": "aws-open-data", "checked_at": "2026-11-03T05:49:49+00:00", "detail": "HTTP 200 含 'Registry of Open Data'", "status": "ok"}
-{"id": "source-coop", "checked_at": "2026-11-03T05:49:49+00:00", "detail": "HTTP 200 含 'Source'", "status": "ok"}
-{"id": "academic-torrents", "checked_at": "2026-11-03T05:49:49+00:00", "detail": "HTTP 200 含 'Academic Torrents'", "status": "ok"}
+{"id": "hn", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2026-08-23T16:25:00.000Z", "license": "odc-by", "popularity": 421, "gated": false, "detail": "声称持续更新，但已 71 天未更新", "status": "warn"}
+{"id": "hn-api", "checked_at": "2026-11-03T06:02:21+00:00", "detail": "HTTP 200", "status": "ok"}
+{"id": "clickhouse-play", "checked_at": "2026-11-03T06:02:21+00:00", "detail": "HTTP 200", "status": "ok"}
+{"id": "reddit-arctic", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2026-08-06T17:53:23.000Z", "license": "other", "popularity": 39, "gated": false, "detail": "likes=39 dl30d=56523", "status": "ok"}
+{"id": "arctic-shift", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2026-10-11T10:07:27Z", "license": null, "popularity": 1773, "detail": "stars=1773", "status": "ok"}
+{"id": "stackexchange", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2023-03-08T03:37:53.000Z", "license": "cc-by-sa-4.0", "popularity": 138, "gated": false, "detail": "likes=138 dl30d=11304", "status": "ok"}
+{"id": "lobsters", "checked_at": "2026-11-03T06:02:21+00:00", "detail": "HTTP 200 含 'short_id'", "status": "ok"}
+{"id": "v2ex", "checked_at": "2026-11-03T06:02:21+00:00", "detail": "HTTP 200 含 'title'", "status": "ok"}
+{"id": "zhihu-kol", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2023-04-23T13:26:03.000Z", "license": null, "popularity": 272, "gated": false, "detail": "likes=272 dl30d=1887", "status": "ok"}
+{"id": "bluesky", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2024-11-28T06:38:41.000Z", "license": "apache-2.0", "popularity": 212, "gated": false, "detail": "likes=212 dl30d=1063", "status": "ok"}
+{"id": "kagi-smallweb", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2026-11-01T14:01:46Z", "license": "MIT", "popularity": 1728, "detail": "stars=1728", "status": "ok"}
+{"id": "awesome-public-datasets", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2026-11-02T19:34:27Z", "license": "MIT", "popularity": 79920, "detail": "stars=79920", "status": "ok"}
+{"id": "public-apis", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2026-11-01T18:22:08Z", "license": "MIT", "popularity": 495615, "detail": "stars=495615", "status": "ok"}
+{"id": "cs-video-courses", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2026-10-31T22:05:30Z", "license": null, "popularity": 84520, "detail": "stars=84520", "status": "ok"}
+{"id": "engineering-blogs", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2024-08-21T13:01:11Z", "license": null, "popularity": 38850, "detail": "803 天未更新", "status": "warn"}
+{"id": "chinese-independent-blogs", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2026-11-03T01:33:42Z", "license": "MIT", "popularity": 24376, "detail": "stars=24376", "status": "ok"}
+{"id": "ruanyf-weekly", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2026-10-31T23:37:58Z", "license": null, "popularity": 107457, "detail": "stars=107457", "status": "ok"}
+{"id": "awesome-rss-feeds", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2026-10-05T18:10:28Z", "license": "CC0-1.0", "popularity": 2867, "detail": "stars=2867", "status": "ok"}
+{"id": "awesome-newsletters", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2026-10-01T13:40:00Z", "license": null, "popularity": 4511, "detail": "stars=4511", "status": "ok"}
+{"id": "openalex", "checked_at": "2026-11-03T06:02:21+00:00", "detail": "HTTP 200 含 '\"meta\"'", "status": "ok"}
+{"id": "open-arxiv", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2026-03-24T04:18:12.000Z", "license": "cc0-1.0", "popularity": 18, "gated": false, "detail": "likes=18 dl30d=882", "status": "ok"}
+{"id": "arxiv-latex", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2026-10-27T07:06:24.000Z", "license": "other", "popularity": 149, "gated": false, "detail": "likes=149 dl30d=16328", "status": "ok"}
+{"id": "semantic-scholar", "checked_at": "2026-11-03T06:02:21+00:00", "status": "warn", "detail": "HTTP 429 限流（端点存在，数据未取到）"}
+{"id": "pubmed-eutils", "checked_at": "2026-11-03T06:02:21+00:00", "detail": "HTTP 200 含 'esearchresult'", "status": "ok"}
+{"id": "pubmed-hf", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2024-01-26T17:52:23.000Z", "license": "other", "popularity": 174, "gated": false, "detail": "likes=174 dl30d=772", "status": "ok"}
+{"id": "wikipedia", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2024-01-09T09:40:51.000Z", "license": "cc-by-sa-3.0,gfdl", "popularity": 1703, "gated": false, "detail": "likes=1703 dl30d=301231", "status": "ok"}
+{"id": "structured-wikipedia", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2026-05-19T12:54:16.000Z", "license": "cc-by-sa-4.0", "popularity": 408, "gated": false, "detail": "likes=408 dl30d=9923", "status": "ok"}
+{"id": "wikimedia-dumps", "checked_at": "2026-11-03T06:02:21+00:00", "detail": "HTTP 200 含 'wikis'", "status": "ok"}
+{"id": "open-library", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2026-03-24T09:55:33.000Z", "license": "cc0-1.0", "popularity": 9, "gated": false, "detail": "likes=9 dl30d=1372", "status": "ok"}
+{"id": "common-corpus", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2026-05-06T00:28:17.000Z", "license": null, "popularity": 446, "gated": false, "detail": "likes=446 dl30d=195842", "status": "ok"}
+{"id": "institutional-books", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2026-08-19T20:10:57.000Z", "license": null, "popularity": 305, "gated": true, "detail": "likes=305 dl30d=8100", "status": "ok"}
+{"id": "us-pd-books", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2024-03-13T19:26:24.000Z", "license": "cc0-1.0", "popularity": 201, "gated": false, "detail": "likes=201 dl30d=357", "status": "ok"}
+{"id": "gutenberg", "checked_at": "2026-11-03T06:02:21+00:00", "detail": "HTTP 200 含 'Pride'", "status": "ok"}
+{"id": "internet-archive", "checked_at": "2026-11-03T06:02:21+00:00", "detail": "HTTP 200 含 'numFound'", "status": "ok"}
+{"id": "youtube-commons", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2024-06-26T08:08:14.000Z", "license": "cc-by-4.0", "popularity": 406, "gated": false, "detail": "likes=406 dl30d=8901", "status": "ok"}
+{"id": "finevideo", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2026-04-30T18:21:00.000Z", "license": "cc", "popularity": 387, "gated": true, "detail": "likes=387 dl30d=31418", "status": "ok"}
+{"id": "podcast-index", "checked_at": "2026-11-03T06:02:21+00:00", "detail": "HTTP 200 含 'Podcast'", "status": "ok"}
+{"id": "emilia", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2025-02-28T05:41:37.000Z", "license": "cc-by-4.0", "popularity": 505, "gated": true, "detail": "likes=505 dl30d=57463", "status": "ok"}
+{"id": "gharchive", "checked_at": "2026-11-03T06:02:21+00:00", "detail": "HTTP 206", "status": "ok"}
+{"id": "open-github", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2026-04-09T05:04:03.000Z", "license": "odc-by", "popularity": 10, "gated": false, "detail": "声称持续更新，但已 208 天未更新", "status": "warn"}
+{"id": "the-stack-v2", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2026-08-03T13:24:25.000Z", "license": "other", "popularity": 671, "gated": true, "detail": "likes=671 dl30d=11493", "status": "ok"}
+{"id": "swe-chat", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2026-10-03T22:38:39.000Z", "license": "odc-by", "popularity": 150, "gated": true, "detail": "likes=150 dl30d=15307", "status": "ok"}
+{"id": "caselaw", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2025-06-06T03:51:23.000Z", "license": null, "popularity": 229, "gated": false, "detail": "likes=229 dl30d=6243", "status": "ok"}
+{"id": "courtlistener", "checked_at": "2026-11-03T06:02:21+00:00", "detail": "HTTP 200 含 'search'", "status": "ok"}
+{"id": "au-legal", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2026-03-07T03:23:13.000Z", "license": "other", "popularity": 107, "gated": false, "detail": "likes=107 dl30d=10705", "status": "ok"}
+{"id": "owid", "checked_at": "2026-11-03T06:02:21+00:00", "detail": "HTTP 200 含 'entity,code,year'", "status": "ok"}
+{"id": "worldbank", "checked_at": "2026-11-03T06:02:21+00:00", "detail": "HTTP 200 含 'indicator'", "status": "ok"}
+{"id": "data-gov", "checked_at": "2026-11-03T06:02:21+00:00", "detail": "HTTP 200 含 'dataset'", "status": "ok"}
+{"id": "sec-edgar", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2026-04-17T21:13:20.000Z", "license": "apache-2.0", "popularity": 51, "gated": false, "detail": "likes=51 dl30d=16057", "status": "ok"}
+{"id": "yahoo-finance", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2026-11-03T04:48:34.000Z", "license": "odc-by", "popularity": 148, "gated": false, "detail": "likes=148 dl30d=162790", "status": "ok"}
+{"id": "earnings-calls", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2025-05-21T20:30:30.000Z", "license": "mit", "popularity": 22, "gated": false, "detail": "likes=22 dl30d=1396", "status": "ok"}
+{"id": "economic-index", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2026-09-30T17:14:54.000Z", "license": "mit", "popularity": 599, "gated": false, "detail": "likes=599 dl30d=21608", "status": "ok"}
+{"id": "gdelt", "checked_at": "2026-11-03T06:02:21+00:00", "detail": "HTTP 200 含 'export'", "status": "ok"}
+{"id": "newswire", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2025-08-30T12:43:14.000Z", "license": "cc-by-4.0", "popularity": 94, "gated": false, "detail": "likes=94 dl30d=10995", "status": "ok"}
+{"id": "common-crawl", "checked_at": "2026-11-03T06:02:21+00:00", "detail": "HTTP 200 含 'CC-MAIN'", "status": "ok"}
+{"id": "fineweb", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2025-07-11T20:16:53.000Z", "license": "odc-by", "popularity": 1389, "gated": false, "detail": "likes=1389 dl30d=436828", "status": "ok"}
+{"id": "fineweb-2", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2025-10-27T18:32:07.000Z", "license": "odc-by", "popularity": 923, "gated": false, "detail": "likes=923 dl30d=139664", "status": "ok"}
+{"id": "finepdfs", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2026-04-03T19:19:23.000Z", "license": "odc-by", "popularity": 954, "gated": false, "detail": "likes=954 dl30d=81557", "status": "ok"}
+{"id": "chinese-webtext", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2024-12-02T08:43:03.000Z", "license": "apache-2.0", "popularity": 34, "gated": false, "detail": "likes=34 dl30d=3255", "status": "ok"}
+{"id": "amazon-reviews", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2024-12-08T22:21:49.000Z", "license": null, "popularity": 397, "gated": false, "detail": "likes=397 dl30d=147699", "status": "ok"}
+{"id": "steam-games", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2026-11-02T07:38:22.000Z", "license": "mit", "popularity": 94, "gated": false, "detail": "likes=94 dl30d=2911", "status": "ok"}
+{"id": "lichess", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2025-10-16T09:07:45.000Z", "license": "cc0-1.0", "popularity": 120, "gated": false, "detail": "likes=120 dl30d=868165", "status": "ok"}
+{"id": "musicbrainz", "checked_at": "2026-11-03T06:02:21+00:00", "detail": "HTTP 200 含 'artists'", "status": "ok"}
+{"id": "osm", "checked_at": "2026-11-03T06:02:21+00:00", "detail": "HTTP 200 含 'planet'", "status": "ok"}
+{"id": "finedna", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2026-10-30T17:15:34.000Z", "license": "apache-2.0", "popularity": 43, "gated": false, "detail": "likes=43 dl30d=4441", "status": "ok"}
+{"id": "ct-rate", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2026-10-12T14:23:57.000Z", "license": "cc-by-nc-sa-4.0", "popularity": 383, "gated": true, "detail": "likes=383 dl30d=129975", "status": "ok"}
+{"id": "nvidia-av", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2026-10-23T06:52:01.000Z", "license": "other", "popularity": 1171, "gated": true, "detail": "likes=1171 dl30d=230907", "status": "ok"}
+{"id": "objaverse", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2026-10-08T13:51:55.000Z", "license": "odc-by", "popularity": 482, "gated": false, "detail": "likes=482 dl30d=1296013", "status": "ok"}
+{"id": "egocentric-10k", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2026-02-16T05:58:56.000Z", "license": "apache-2.0", "popularity": 371, "gated": true, "detail": "likes=371 dl30d=56702", "status": "ok"}
+{"id": "wildchat", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2024-10-17T18:04:41.000Z", "license": "odc-by", "popularity": 480, "gated": false, "detail": "likes=480 dl30d=37704", "status": "ok"}
+{"id": "lmsys-chat", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2024-07-27T09:28:42.000Z", "license": null, "popularity": 1064, "gated": true, "detail": "likes=1064 dl30d=4314", "status": "ok"}
+{"id": "hle", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2026-01-20T22:42:17.000Z", "license": "mit", "popularity": 1072, "gated": true, "detail": "likes=1072 dl30d=28763", "status": "ok"}
+{"id": "gdpval", "checked_at": "2026-11-03T06:02:21+00:00", "updated": "2026-02-10T19:31:04.000Z", "license": null, "popularity": 572, "gated": false, "detail": "likes=572 dl30d=279620", "status": "ok"}
+{"id": "zenodo", "checked_at": "2026-11-03T06:02:21+00:00", "detail": "HTTP 200 含 'hits'", "status": "ok"}
+{"id": "aws-open-data", "checked_at": "2026-11-03T06:02:21+00:00", "detail": "HTTP 200 含 'Registry of Open Data'", "status": "ok"}
+{"id": "source-coop", "checked_at": "2026-11-03T06:02:21+00:00", "detail": "HTTP 200 含 'Source'", "status": "ok"}
+{"id": "academic-torrents", "checked_at": "2026-11-03T06:02:21+00:00", "detail": "HTTP 200 含 'Academic Torrents'", "status": "ok"}
