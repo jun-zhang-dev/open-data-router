@@ -2,7 +2,7 @@
 
 按需求找优质公开数据源的路由表。每一条都有可机判的探针，由 `verify.py` 验证后生成本文件。
 
-- 最近验证：2026-11-03 06:02 UTC；共 77 条：✅ 73 · ⚠️ 4 · ❌ 0
+- 最近验证：2026-11-09 11:29 UTC；共 77 条：✅ 73 · ⚠️ 4 · ❌ 0
 - ✅ 探针通过且近期有更新（或有意冻结的快照）；⚠️ 降级：超过 540 天未更新 / 声称实时但已停更 / 仓库已归档 / 被限流；❌ 探针失败
 - 这里不追求全：长尾需求先去「人工清单」与「数据平台」两类入口
 - 「为什么优质」写的是信号来源（谁在筛、凭什么筛），不是对内容的担保；许可列为源头自报，使用前以源头为准
@@ -31,7 +31,7 @@
 
 | 源 | 什么时候来这里 | 为什么优质 | 状态 | 最近更新 | 许可 |
 |---|---|---|---|---|---|
-| [open-index/hacker-news](https://huggingface.co/datasets/open-index/hacker-news) | 要 HN 全量帖子/评论（2006 起，Parquet），做 HackerTube 式的推荐挖掘；要最新数据补跑官方 API | HackerTube 的直接原料；技术人群近 20 年的主动推荐 | ⚠️ 声称持续更新，但已 71 天未更新 | 2026-08-23 | odc-by |
+| [open-index/hacker-news](https://huggingface.co/datasets/open-index/hacker-news) | 要 HN 全量帖子/评论（2006 起，Parquet），做 HackerTube 式的推荐挖掘；要最新数据补跑官方 API | HackerTube 的直接原料；技术人群近 20 年的主动推荐 | ⚠️ 声称持续更新，但已 77 天未更新 | 2026-08-23 | odc-by |
 | [hacker-news.firebaseio.com](https://hacker-news.firebaseio.com/v0/maxitem.json) | 要 HN 实时单条数据（官方 API） | 官方源，上面 HF 镜像的上游 | ✅ | — | — |
 | [play.clickhouse.com](https://play.clickhouse.com/?user=play&query=SELECT+count()+FROM+hackernews) | 不下载、直接用 SQL 试查 HN / GitHub 事件等表 | 预装 hackernews、github_events 等表，原型验证零成本 | ✅ | — | — |
 | [open-index/arctic](https://huggingface.co/datasets/open-index/arctic) | 要 Reddit 全量（2005 起，157 亿条），按 subreddit 切高质量社区 | Pushshift 停服后的社区接替，覆盖所有公开 subreddit | ✅ | 2026-08-06 | other |
@@ -41,18 +41,18 @@
 | [www.v2ex.com](https://www.v2ex.com/api/topics/hot.json) | 要中文技术社区热帖 | 中文程序员社区的长期主阵地 | ✅ | — | — |
 | [wangrui6/Zhihu-KOL](https://huggingface.co/datasets/wangrui6/Zhihu-KOL) 🧊 | 要中文知乎高质量问答快照 | KOL 回答，带点赞 | ✅ | 2023-04-23 | — |
 | [alpindale/two-million-bluesky-posts](https://huggingface.co/datasets/alpindale/two-million-bluesky-posts) 🧊 | 要 Bluesky 帖子样本 | 开放协议社交网络的公开数据 | ✅ | 2024-11-28 | apache-2.0 |
-| [kagisearch/smallweb](https://github.com/kagisearch/smallweb) | 要人工挑过的独立博客 / 小站列表（带 RSS） | Kagi 人工维护，排除 SEO 农场 | ✅ | 2026-11-01 | MIT |
+| [kagisearch/smallweb](https://github.com/kagisearch/smallweb) | 要人工挑过的独立博客 / 小站列表（带 RSS） | Kagi 人工维护，排除 SEO 农场 | ✅ | 2026-11-06 | MIT |
 
 ## 人工清单
 
 | 源 | 什么时候来这里 | 为什么优质 | 状态 | 最近更新 | 许可 |
 |---|---|---|---|---|---|
-| [awesomedata/awesome-public-datasets](https://github.com/awesomedata/awesome-public-datasets) | 找某主题的公开数据集（本路由没覆盖到的长尾先去这里） | 8 万星，按主题分类，元数据在 apd-core 可机读 | ✅ | 2026-11-02 | MIT |
-| [public-apis/public-apis](https://github.com/public-apis/public-apis) | 找免费 API | 最大的公开 API 清单 | ✅ | 2026-11-01 | MIT |
-| [Developer-Y/cs-video-courses](https://github.com/Developer-Y/cs-video-courses) | 要有视频的大学 CS 课程 | 按学科整理的公开课视频 | ✅ | 2026-10-31 | — |
-| [kilimchoi/engineering-blogs](https://github.com/kilimchoi/engineering-blogs) | 要公司技术博客列表 | 3.9 万星；注意 2024 后更新放缓 | ⚠️ 803 天未更新 | 2024-08-21 | — |
-| [timqian/chinese-independent-blogs](https://github.com/timqian/chinese-independent-blogs) | 要中文独立博客（多数带 RSS） | 社区维护，带 RSS 地址 | ✅ | 2026-11-03 | MIT |
-| [ruanyf/weekly](https://github.com/ruanyf/weekly) | 要中文人工筛过的科技链接（历年每期 Markdown） | 每周人工筛选，全文在 GitHub 易抽取 | ✅ | 2026-10-31 | — |
+| [awesomedata/awesome-public-datasets](https://github.com/awesomedata/awesome-public-datasets) | 找某主题的公开数据集（本路由没覆盖到的长尾先去这里） | 8 万星，按主题分类，元数据在 apd-core 可机读 | ✅ | 2026-11-08 | MIT |
+| [public-apis/public-apis](https://github.com/public-apis/public-apis) | 找免费 API | 最大的公开 API 清单 | ✅ | 2026-11-07 | MIT |
+| [Developer-Y/cs-video-courses](https://github.com/Developer-Y/cs-video-courses) | 要有视频的大学 CS 课程 | 按学科整理的公开课视频 | ✅ | 2026-11-07 | — |
+| [kilimchoi/engineering-blogs](https://github.com/kilimchoi/engineering-blogs) | 要公司技术博客列表 | 3.9 万星；注意 2024 后更新放缓 | ⚠️ 809 天未更新 | 2024-08-21 | — |
+| [timqian/chinese-independent-blogs](https://github.com/timqian/chinese-independent-blogs) | 要中文独立博客（多数带 RSS） | 社区维护，带 RSS 地址 | ✅ | 2026-11-09 | MIT |
+| [ruanyf/weekly](https://github.com/ruanyf/weekly) | 要中文人工筛过的科技链接（历年每期 Markdown） | 每周人工筛选，全文在 GitHub 易抽取 | ✅ | 2026-11-08 | — |
 | [plenaryapp/awesome-rss-feeds](https://github.com/plenaryapp/awesome-rss-feeds) | 要按主题/国家分类的 RSS（带 OPML） | OPML 可直接导入阅读器或采集器 | ✅ | 2026-10-05 | CC0-1.0 |
 | [zudochkin/awesome-newsletters](https://github.com/zudochkin/awesome-newsletters) | 要英文 Newsletter 列表 | 按领域整理 | ✅ | 2026-10-01 | — |
 
@@ -100,7 +100,7 @@
 | 源 | 什么时候来这里 | 为什么优质 | 状态 | 最近更新 | 许可 |
 |---|---|---|---|---|---|
 | [data.gharchive.org](https://data.gharchive.org/2024-01-01-0.json.gz) | 要 GitHub 全部公开事件（2011 起，每小时一个文件） | star/fork/PR 是开发者的行为信号 | ✅ | — | — |
-| [open-index/open-github](https://huggingface.co/datasets/open-index/open-github) | 要 GH Archive 的 Parquet 实时镜像（注意卡片称历史仍在回填） | 免解析，直接 DuckDB | ⚠️ 声称持续更新，但已 208 天未更新 | 2026-04-09 | odc-by |
+| [open-index/open-github](https://huggingface.co/datasets/open-index/open-github) | 要 GH Archive 的 Parquet 实时镜像（注意卡片称历史仍在回填） | 免解析，直接 DuckDB | ⚠️ 声称持续更新，但已 214 天未更新 | 2026-04-09 | odc-by |
 | [bigcode/the-stack-v2](https://huggingface.co/datasets/bigcode/the-stack-v2) 🔒 | 要许可清洗过的源码大集 | BigCode 官方，带许可证过滤 | ✅ | 2026-08-03 | other |
 | [SALT-NLP/SWE-chat](https://huggingface.co/datasets/SALT-NLP/SWE-chat) 🔒 | 要真实开发者与编码 agent 的对话 | 真实使用而非合成 | ✅ | 2026-10-03 | odc-by |
 
@@ -120,7 +120,7 @@
 | 源 | 什么时候来这里 | 为什么优质 | 状态 | 最近更新 | 许可 |
 |---|---|---|---|---|---|
 | [TeraflopAI/SEC-EDGAR](https://huggingface.co/datasets/TeraflopAI/SEC-EDGAR) | 要美股公司公告批量 | 一手披露文件 | ✅ | 2026-04-17 | apache-2.0 |
-| [defeatbeta/yahoo-finance-data](https://huggingface.co/datasets/defeatbeta/yahoo-finance-data) | 要美股行情 / 财报（每日更新） | 持续更新，下载量高 | ✅ | 2026-11-03 | odc-by |
+| [defeatbeta/yahoo-finance-data](https://huggingface.co/datasets/defeatbeta/yahoo-finance-data) | 要美股行情 / 财报（每日更新） | 持续更新，下载量高 | ✅ | 2026-11-09 | odc-by |
 | [kurry/sp500_earnings_transcripts](https://huggingface.co/datasets/kurry/sp500_earnings_transcripts) | 要标普 500 财报电话会转写 | 管理层原话 | ✅ | 2025-05-21 | mit |
 | [Anthropic/EconomicIndex](https://huggingface.co/datasets/Anthropic/EconomicIndex) | 要 AI 在各职业任务中的实际使用分布 | Anthropic 一手使用数据 | ✅ | 2026-09-30 | mit |
 
@@ -146,7 +146,7 @@
 | 源 | 什么时候来这里 | 为什么优质 | 状态 | 最近更新 | 许可 |
 |---|---|---|---|---|---|
 | [McAuley-Lab/Amazon-Reviews-2023](https://huggingface.co/datasets/McAuley-Lab/Amazon-Reviews-2023) 🧊 | 要商品评论 + 元数据（推荐系统经典） | UCSD 官方，规模最大 | ✅ | 2024-12-08 | — |
-| [FronkonGames/steam-games-dataset](https://huggingface.co/datasets/FronkonGames/steam-games-dataset) | 要 Steam 游戏元数据与评价 | 持续更新 | ✅ | 2026-11-02 | mit |
+| [FronkonGames/steam-games-dataset](https://huggingface.co/datasets/FronkonGames/steam-games-dataset) | 要 Steam 游戏元数据与评价 | 持续更新 | ✅ | 2026-11-08 | mit |
 | [Lichess/standard-chess-games](https://huggingface.co/datasets/Lichess/standard-chess-games) | 要全量棋局 / 残局题 | Lichess 官方，CC0 | ✅ | 2025-10-16 | cc0-1.0 |
 | [musicbrainz.org](https://musicbrainz.org/ws/2/artist/?query=radiohead&limit=1&fmt=json) | 要音乐元数据（艺人、专辑、录音） | 开放音乐百科，CC0 核心数据 | ✅ | — | — |
 | [planet.openstreetmap.org](https://planet.openstreetmap.org/) | 要全球地图 / POI | 开放地图的上游 | ✅ | — | — |
@@ -162,7 +162,7 @@
 
 | 源 | 什么时候来这里 | 为什么优质 | 状态 | 最近更新 | 许可 |
 |---|---|---|---|---|---|
-| [nvidia/PhysicalAI-Autonomous-Vehicles](https://huggingface.co/datasets/nvidia/PhysicalAI-Autonomous-Vehicles) 🔒 | 要自动驾驶多传感器数据 | NVIDIA 官方，规模大 | ✅ | 2026-10-23 | other |
+| [nvidia/PhysicalAI-Autonomous-Vehicles](https://huggingface.co/datasets/nvidia/PhysicalAI-Autonomous-Vehicles) 🔒 | 要自动驾驶多传感器数据 | NVIDIA 官方，规模大 | ✅ | 2026-11-06 | other |
 | [allenai/objaverse](https://huggingface.co/datasets/allenai/objaverse) | 要大规模 3D 物体 | AI2 官方 | ✅ | 2026-10-08 | odc-by |
 | [builddotai/Egocentric-10K](https://huggingface.co/datasets/builddotai/Egocentric-10K) 🔒 | 要第一人称工厂作业视频 | 真实工作场景 | ✅ | 2026-02-16 | apache-2.0 |
 
